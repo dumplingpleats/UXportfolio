@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella Song's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation styling */
+        nav {
+            text-align: right;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Main section styling */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .bio {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .projects-card {
+            background-color: #e6e6fa;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .projects-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .projects-list li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .projects-list li:hover {
+            background-color: #ddd;
+        }
+
+        .project-details {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            background-color: #d3d3d3;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Banner styling */
+        .banner {
+            font-size: 1.2em;
+            color: #fff;
+            background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red);
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .banner p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .bio {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ella Song</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="art_media.html">Fiber Femme</a>
+            <a href="coding_projects.html">Programming Projects</a>
+        </nav>
+    </header>
+    <section>
+        <div class="profile-card">
+            <div>
+                <h2>About Me</h2>
+                <p class="bio">
+                    I'm Ella Song, a data-driven designer with versatile experience with Fashion, Media, and Technology Companies. Currently, I am completing a Fashion Technology Internship at Blackstone, 
+                    and double majoring Computer Science and Psychology at Hunter College- projected to graduate December 2024. Previously, I have served as a Mentee at Bloomberg, a Data Science Intern at 
+                    the Sadie Nash Leadership Project, and the CEO/Brand Designer for Fiber Femme, a handmade crochet and jewelry business featured in Material Grrrrlz Magazine. In my free time, I love contributing 
+                    to the queer community by managing Go! Magazine's Pride Month operations and web designing for Queer Athena, an event planning LLC.
+                </p>
+                <a href="#" class="resume-button">Resume</a>
+            </div>
+            <img src="IMG_2757.JPG" alt="Ella Song" class="profile-photo">
+        </div>
+    </section>
+    <section class="projects-card">
+        <div class="projects-header">
+            <h2>Projects</h2>
+            <button id="toggle-projects">Toggle</button>
+        </div>
+        <div>
+            <ul class="projects-list" id="projects-list">
+                <li data-type="business">Sttin Site</li>
+                <li data-type="business">Bespoke Product Page</li>
+                <li data-type="business">Personal Portfolio</li>
+                <li data-type="business">Couture Packaging</li>
+                <li data-type="business">Garment Stationary</li>
+                <li data-type="business">Algorithmic Adventures Game</li>
+                <li data-type="pleasure">Crochet</li>
+                <li data-type="pleasure">Drawn</li>
+                <li data-type="pleasure">Handknit</li>
+                <li data-type="pleasure">Painted</li>
+                <li data-type="pleasure">Sculpted</li>
+                <li data-type="pleasure">Tailored</li>
+            </ul>
+            <div class="project-details" id="project-details">
+                Hover over a project to see details here.
+            </div>
+        </div>
+    </section>
+    <section class="contact-card">
+        <h2>Interested?</h2>
+        <form class="contact-form">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone">
+            <input type="text" placeholder="LinkedIn">
+        </form>
+    </section>
+    <div class="banner">
+        <p>★ Fashion at Blackstone ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Bloomberg Mentee ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Basta Fellow ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ CS and Psych at Hunter ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Fiber Femme Founder ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Queer Athena Web Designer ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Go! Magazine Pride Operations ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>★ Fashion at Blackstone ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Bloomberg Mentee ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Basta Fellow ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ CS and Psych at Hunter ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Fiber Femme Founder ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Queer Athena Web Designer ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ Go! Magazine Pride Operations ★ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <footer>
+        &copy; 2024 Ella Song
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const projectsList = document.getElementById('projects-list');
+            const projectDetails = document.getElementById('project-details');
+            const toggleProjects = document.getElementById('toggle-projects');
+
+            projectsList.addEventListener('mouseover', function (e) {
+                if (e.target.tagName === 'LI') {
+                    projectDetails.innerText = e.target.innerText;
+                }
+            });
+
+            toggleProjects.addEventListener('click', function () {
+                const businessProjects = document.querySelectorAll('[data-type="business"]');
+                const pleasureProjects = document.querySelectorAll('[data-type="pleasure"]');
+                businessProjects.forEach(project => project.classList.toggle('hidden'));
+                pleasureProjects.forEach(project => project.classList.toggle('hidden'));
+            });
+        });
+    </script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</body>
+</html>
